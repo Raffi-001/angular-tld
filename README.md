@@ -18,3 +18,10 @@ app.controller('myCtrl', ['$scope', function($scope) {
 }]);
 </script>
 ```
+## Running the example
+First run the following
+```
+cd example
+bower install
+```
+Then open example/index.html in your browser
