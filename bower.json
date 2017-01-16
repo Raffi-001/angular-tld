@@ -1,0 +1,28 @@
+{
+  "name": "angular-tldjs",
+  "authors": [
+    "Raffi Hovhannesian <raffi.hovhannesian@wicastr.com>"
+  ],
+  "description": "A tld.js port to angular presented as a factory.",
+  "main": "angular-tld.js",
+  "keywords": [
+    "angularjs",
+    "factory",
+    "tld",
+    "angular",
+    "domain",
+    "sld",
+    "browser",
+    "uri",
+    "url",
+    "name",
+    "subdomain",
+    "public",
+    "suffix"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Raffi-001/angular-tld",
+  "dependencies": {
+    "tld-browserified": "tldjs-browserified#*"
+  }
+}

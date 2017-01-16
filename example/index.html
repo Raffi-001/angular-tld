@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+<h1>Angular TLD Example</h1>
+<code>
+	tld.getDomain('mail.google.co.uk');
+</code>
+<div>
+<h4>Output:</h4>
+{{ domain }}
+</div>
+<br /><br />
+For more help and examples visit <a href="https://www.npmjs.com/package/tldjs">https://www.npmjs.com/package/tldjs</a>
+</div>
+
+<script src="bower_components/tld-browserified/tld.js"></script>
+<script src="../angular-tld.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
