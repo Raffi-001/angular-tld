@@ -1,7 +1,5 @@
-var app = angular.module('myApp', []);
+var app = angular.module('myApp', ['ngTld']);
 
-app.controller('myCtrl', ['$scope', function($scope) {
-    $scope.firstName = 'John';
-    $scope.lastName = 'Sina';
-    $scope.domain = tld.getDomain('mail.google.co.uk');
+app.controller('myCtrl', ['$scope', 'ngTld', function($scope, ngTld) {
+    $scope.domain = ngTld.getDomain('mail.google.co.uk');
 }]);

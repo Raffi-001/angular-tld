@@ -1,9 +1,9 @@
-angular.module('ng-tld', [])
-    .factory('ng-tld', function() {
-        var isValidTld = function($url) {
-            return tld.isValidTld($url);
+angular.module('ngTld', [])
+    .factory('ngTld', function() {
+        var getDomain = function($path) {
+            return tld.getDomain($path);
         }
         return {
-            isValid: isValidTld
+            getDomain: getDomain
         };
     });
