@@ -11,10 +11,10 @@ bower install angular-tld
 <script src="bower_components/tld-browserified/tld.js"></script>
 <script src="bower_components/angular-tld/angular-tld.js"></script>
 <script>
-var app = angular.module('myApp', []);
+var app = angular.module('myApp', ['ngTld']);
 
-app.controller('myCtrl', ['$scope', function($scope) {
-    $scope.domain = tld.getDomain('mail.google.co.uk');
+app.controller('myCtrl', ['$scope', 'ngTld', function($scope, ngTld) {
+    $scope.domain = ngTld.getDomain('mail.google.co.uk');
 }]);
 </script>
 ```
