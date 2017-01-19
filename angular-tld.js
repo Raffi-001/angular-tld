@@ -1,19 +1,28 @@
 angular.module('ngTld', [])
-    .factory('ngTld', function() {
-        var getDomain = function($path) {
-            return tld.getDomain($path);
-        }
+    .factory('ngTld', ngTld)
+    .directive('checkTld', checkTld);
 
-        var tldExists = function($path) {
-            return tld.getTldExists($path);
-        }
+function ngTld() {
+    var tldExists = function($path) {
+        return tld.tldExists($path.$viewValue);
+    }
 
-        var getSubdomain = function($path) {
-            return tld.getSubdomain($path);
+    return {
+        tldExists: tldExists,
+    }
+}
+
+function checkTld(ngTld) {
+    return {
+        restrict: 'A',
+        require: 'ngModel',
+        link: function(scope, element, attr, ngModel) {
+            ngModel.$validators.invalidTld = function(modelValue, viewValue) {
+                var status = true;
+                status = ngTld.tldExists(ngModel);
+                return status;
+            }
         }
-        return {
-            getDomain: getDomain,
-            tldExists: tldExists,
-            getSubdomain: getSubdomain
-        };
-    });
+    }
+}
+
