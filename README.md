@@ -14,12 +14,17 @@ bower install angular-tld
 var app = angular.module('myApp', ['ngTld']);
 
 app.controller('myCtrl', ['$scope', 'ngTld', function($scope, ngTld) {
-    $scope.domain = ngTld.getDomain('mail.google.co.uk');
+    //...
 }]);
 </script>
+
+<form name="myform">
+    <input name="myTld" check-tld ng-model="myTld" />
+    <small style="color: red;" ng-if="myForm.myTld.$error.invalidTld">Not a valid TLD :(</small>
+</form>
 ```
 ## Running the example
-First run the following
+First run the following in terminal
 ```
 cd example
 bower install
