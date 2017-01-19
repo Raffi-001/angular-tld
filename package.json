@@ -1,0 +1,29 @@
+{
+  "name": "angular-tld",
+  "version": "1.0.0",
+  "description": "A tld.js port to angular presented as a factory ",
+  "main": "angular-tld.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Raffi-001/angular-tld.git"
+  },
+  "keywords": [
+    "angularjs",
+    "tld",
+    "domain",
+    "validation",
+    "directive"
+  ],
+  "author": "Raffi Hovhannesian <hovhannesian@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Raffi-001/angular-tld/issues"
+  },
+  "homepage": "https://github.com/Raffi-001/angular-tld#readme"
+}
