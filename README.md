@@ -1,5 +1,5 @@
 # angular-tld
-A tld.js port to angular presented as a directive
+A tld.js wrapper presented as an Angularjs directive
 
 ## Installation
 ```
